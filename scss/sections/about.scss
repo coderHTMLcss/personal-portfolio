@@ -1,0 +1,167 @@
+.about {
+  padding-bottom: 30px;
+
+  .tabs {
+    @include flex(center, center);
+    column-gap: 40px;
+    margin-bottom: 83px;
+
+    @media screen and (min-width: $tablet) {
+      @include flex(flex-start, center);
+    }
+
+    @media screen and (min-width: $tablet-bigger) {
+      margin-bottom: 165px;
+    }
+
+    &__btn {
+      @include text(1.5em, 25px, 400, $white);
+      letter-spacing: 0.05em;
+      text-transform: capitalize;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.7s ease;
+
+      @media screen and (min-width: $tablet-bigger) {
+        @include text(2.5em, 41px);
+      }
+
+      &:active {
+        outline: 2px solid $white;
+      }
+
+      &:focus {
+        outline: 2px solid $white;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 10px 3px $blue;
+      }
+    }
+  }
+
+  &-wrapper {
+    @include flex(flex-start, flex-start, column);
+
+    @media screen and (min-width: $tablet) {
+      @include flex(space-around, center, row);
+    }
+  }
+
+  &__picture {
+    max-width: 254px;
+    width: 100%;
+    height: 280px;
+    margin: 0 auto 44px;
+
+    @media screen and (min-width: $tablet) {
+      max-width: 280px;
+      width: 100%;
+      height: 280px;
+      margin: 0;
+    }
+
+    @media screen and (min-width: $tablet-bigger) {
+      max-width: 400px;
+      height: 448px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 470px;
+      height: 518px;
+    }
+
+    @include pseudoElement(absolute, before, "") {
+      position: absolute;
+      display: block;
+      width: 207px;
+      height: 293px;
+      background-color: #5a6c6c;
+      top: -19px;
+      left: -21px;
+
+      z-index: -1;
+
+      @media screen and (min-width: $tablet-bigger) {
+        width: 315px;
+        height: 470px;
+        top: -25px;
+        left: -30px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        width: 384px;
+        height: 543px;
+        top: -35px;
+        left: -39px;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__contnet {
+    @media screen and (min-width: $tablet) {
+      max-width: 320px;
+      width: 100%;
+    }
+
+    @media screen and (min-width: $tablet-bigger) {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 521px;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include text(2.8em, 69px, 600, $white);
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+
+    @media screen and (min-width: $tablet-bigger) {
+      @include text(3.5em, 91px, 600, $white);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include text(5.8em, 141px, 600, $white);
+    }
+
+    @include pseudoElement(absolute, before, "") {
+      content: url("/img/icon-a.svg");
+      position: absolute;
+      display: block;
+      width: 46px;
+      height: 62px;
+      top: -15.5px;
+      left: 0px;
+
+      z-index: -1;
+
+      @media screen and (min-width: $desktop) {
+        width: 94px;
+        height: 128px;
+        top: -37px;
+      }
+    }
+  }
+
+  &__description {
+    @include text(0.5em, 13px, 400, $white);
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+
+    @media screen and (min-width: $tablet-bigger) {
+      @include text(0.875em, 21px, 400, $white);
+    }
+  }
+}

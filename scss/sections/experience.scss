@@ -1,0 +1,123 @@
+.experience {
+  &-wrapper {
+    padding-top: 40px;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: $tablet) {
+      padding-bottom: 40px;
+    }
+
+    @media screen and (min-width: $tablet-bigger) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 70px;
+      padding-bottom: 90px;
+    }
+  }
+
+  &-title {
+    text-align: center;
+    @include text(1.5em, 36px, 600, $white);
+    margin-bottom: 31px;
+
+    @media screen and (min-width: $tablet-bigger) {
+      @include text(2.2em, 51px, 600, $white);
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: inline-block;
+      text-align: start;
+      @include text(3.5em, 85px, 600, $white);
+      margin-bottom: 87px;
+
+      @include pseudoElement(absolute, before, "") {
+        position: absolute;
+        display: block;
+        width: 131px;
+        height: 2px;
+        background-color: $grey-dark;
+        top: 50%;
+        left: -25%;
+      }
+
+      @include pseudoElement(absolute, after, "") {
+        position: absolute;
+        display: block;
+        width: 597px;
+        height: 2px;
+        background-color: $grey-dark;
+        top: 50%;
+        right: -112%;
+      }
+    }
+  }
+
+  &-gallery {
+    @media screen and (min-width: $tablet) {
+      display: grid;
+      grid-template-columns: 280px 280px;
+      justify-content: center;
+      grid-gap: 15px 24px;
+    }
+
+    @media screen and (min-width: $tablet-bigger) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 auto 8px;
+    @media screen and (min-width: $tablet) {
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    left: 32px;
+    bottom: 23px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: $white;
+
+    @media screen and (min-width: $tablet-bigger) {
+      left: 65px;
+      bottom: 45px;
+    }
+  }
+
+  &__info-title {
+    @include text(0.75em, 19px);
+
+    @media screen and (min-width: $tablet-bigger) {
+      @include text(1.5em, 39px);
+    }
+  }
+
+  &__info-text {
+    @include text(0.43em, 11px);
+
+    @media screen and (min-width: $tablet-bigger) {
+      @include text(0.875em, 21px);
+    }
+  }
+
+  &__info-year {
+    @include text(0.43em, 11px);
+
+    @media screen and (min-width: $tablet-bigger) {
+      @include text(0.75em, 18px);
+    }
+  }
+}

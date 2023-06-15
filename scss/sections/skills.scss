@@ -1,0 +1,359 @@
+.skills {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+
+  @media screen and (min-width: $tablet) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 67px;
+    padding-bottom: 70px;
+    text-align: start;
+  }
+
+  &-title {
+    display: inline-block;
+    position: relative;
+    @include text(2.6em, 63px, 600, $white);
+    margin-bottom: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 129.7px;
+      height: 2px;
+      background-color: $white;
+      border-radius: 2px;
+
+      left: 7px;
+      top: 0;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include text(3.5em, 85px, 600, $white);
+    }
+  }
+}
+
+.circular {
+  &-box {
+    display: flex;
+    column-gap: 40px;
+
+    @media screen and (min-width: $tablet) {
+      @include flex(space-evenly, center);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include flex(space-between, center);
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include flex(center, center);
+    min-width: 96px;
+    height: 96px;
+
+    border-radius: 50%;
+
+    @media screen and (min-width: $tablet) {
+      min-width: 140px;
+      height: 140px;
+    }
+
+    @media screen and (min-width: $tablet-bigger) {
+      min-width: 210px;
+      height: 210px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      min-width: 280px;
+      height: 280px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background-color: $background;
+      z-index: 0;
+
+      @media screen and (min-width: $tablet) {
+        min-width: 116px;
+        height: 116px;
+      }
+
+      @media screen and (min-width: $tablet-bigger) {
+        min-width: 170px;
+        height: 170px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        width: 218px;
+        height: 218px;
+      }
+    }
+
+    &#progress1 {
+      background: conic-gradient(#3c1dff, #15b9b9 270deg, #1f1f1f 0%);
+    }
+
+    &#progress2 {
+      background: conic-gradient(#3c1dff, #15b9b9 250deg, #1f1f1f 0%);
+    }
+
+    &#progress3 {
+      background: conic-gradient(#3c1dff, #15b9b9 240deg, #1f1f1f 0%);
+    }
+
+    &#progress4 {
+      background: conic-gradient(#3c1dff, #15b9b9 180deg, #1f1f1f 0%);
+    }
+  }
+
+  &__item .progress-value {
+    @include text(1.1em, 29px, 600, $white);
+
+    z-index: 1;
+
+    @media screen and (min-width: $desktop) {
+      @include text(2.5em, 65px, 600, $white);
+    }
+  }
+
+  &__item .text {
+    position: absolute;
+    top: 110px;
+    @include text(0.8em, 15px, 600, $white);
+
+    @media screen and (min-width: $tablet) {
+      top: 160px;
+    }
+
+    @media screen and (min-width: $tablet-bigger) {
+      top: 250px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include text(1.5em, 31px, 600, $white);
+      top: 320px;
+    }
+  }
+}
+
+.education {
+  &-wrapper {
+    @media screen and (min-width: $tablet) {
+      text-align: start;
+    }
+    margin-top: 55px;
+
+    @media screen and (min-width: $tablet) {
+      @include flex(space-between, flex-start);
+      margin-top: 100px;
+    }
+
+    @media screen and (min-width: $tablet-bigger) {
+      @include flex(space-evenly, flex-start);
+      margin-top: 200px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include flex(space-between, flex-start);
+      margin-top: 205px;
+    }
+  }
+}
+
+.language {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 52px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 488px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    @include text(1.35em, 34px, 600, $white);
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    margin-bottom: 31px;
+
+    border-bottom: 2px solid white;
+    width: 60%;
+    border-radius: 2px;
+
+    @media screen and (min-width: $tablet) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include text(3.5em, 85px, 600, $white);
+      margin-bottom: 34px;
+    }
+  }
+
+  &__progress {
+    margin-bottom: 15px;
+    position: relative;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 26px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__progress-name {
+    display: inline-block;
+    @include text(1.1em, 27px, 600, $white);
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+      @include text(1.875em, 44px, 600, $white);
+      margin-bottom: 14px;
+    }
+  }
+
+  &__progress-line {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(90deg, #3c1dff 18.63%, #14c9c9 78.88%);
+    border-radius: 30.7105px;
+
+    @media screen and (min-width: $desktop) {
+      height: 24px;
+    }
+  }
+
+  .fluent,
+  .good {
+    position: absolute;
+    @include text(0.5em, 13px, 600, $white);
+
+    @media screen and (min-width: $desktop) {
+      @include text(0.875em, 22px, 600, $white);
+    }
+  }
+
+  .fluent {
+    top: 20px;
+    right: 0;
+  }
+
+  .good {
+    top: 20px;
+    right: 30%;
+  }
+}
+
+.studies {
+  max-width: 300px;
+  width: 100%;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 488px;
+    width: 100%;
+  }
+  &__title {
+    @include text(1em, 34px, 600, $white);
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    margin-bottom: 27px;
+    border-bottom: 2px solid white;
+    width: 40%;
+    border-radius: 2px;
+
+    @media screen and (min-width: $tablet) {
+      @include text(1.35em, 34px, 600, $white);
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include text(3.5em, 85px, 600, $white);
+    }
+  }
+
+  &__info-link {
+    @include flex(flex-start, center);
+    column-gap: 12px;
+    margin-bottom: 14px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 26px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__svg {
+    @include flex(center, center);
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #15b9b9 0%, #3c1dff 100%);
+
+    &:hover {
+      background: linear-gradient(90deg, #15b9b9 0%, #3c1dff 100%);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+
+      @media screen and (min-width: $desktop) {
+        width: 33px;
+        height: 33px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 96px;
+      height: 96px;
+    }
+  }
+
+  &__info-title {
+    @include text(1em, 24px, 600, $white);
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+
+    @media screen and (min-width: $desktop) {
+      @include text(1.875em, 44px, 600, $white);
+    }
+  }
+
+  &__info-text span {
+    display: inline-block;
+    @include text(0.625em, 15px, 300, $grey-dark);
+
+    @media screen and (min-width: $desktop) {
+      @include text(1.125em, 27px, 300, $grey-dark);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.footer {
+  text-align: center;
+  padding-bottom: 67px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 90px;
+    padding-bottom: 194px;
+  }
+
+  &-title {
+    font-size: 1.875em;
+    line-height: 46px;
+    margin-bottom: 9px;
+
+    @media screen and (min-width: $tablet-bigger) {
+      @include text(2.2em, 51px, 600, $white);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include text(3.5em, 85px, 600, $white);
+      margin-bottom: 0px;
+    }
+  }
+
+  &__description {
+    @include text(0.625em, 15px, 500, $grey);
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $desktop) {
+      @include text(1.2em, 29px, 400, $grey);
+      margin-bottom: 25px;
+    }
+  }
+
+  &__button {
+    padding: 12px 42px;
+    @include text(0.875em, 20px, 400, $white);
+
+    @media screen and (min-width: $desktop) {
+      padding: 22px 78px;
+      @include text(1.56em, 38px, 400, $white);
+    }
+  }
+}

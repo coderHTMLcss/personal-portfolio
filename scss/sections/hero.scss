@@ -1,0 +1,138 @@
+.hero {
+  &-wrapper {
+    text-align: center;
+    padding-bottom: 58px;
+    @include flex(inherit, inherit, column-reverse);
+
+    @media screen and (min-width: $tablet) {
+      height: auto;
+      padding-top: 30px;
+
+      @include flex(space-between, center, row);
+    }
+
+    @media screen and (min-width: $tablet-bigger) {
+      padding-top: 100px;
+      padding-bottom: 119px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 148px;
+    }
+  }
+
+  &__info {
+    margin-top: 381px;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: 0px;
+      text-align: start;
+      height: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 557px;
+    }
+  }
+
+  &__greeting {
+    @include text(1.125em, 26px, 300, $white);
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $tablet) {
+      @include text(1.5em, 32px, 300, $white);
+      margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include text(1.5em, 38px, 300, $white);
+      margin-bottom: 0px;
+    }
+  }
+
+  &__title {
+    @include text(2em, 50px, 600, $white);
+
+    @media screen and (min-width: $tablet) {
+      @include text(3.2em, 60px, 600, $white);
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include text(4.187em, 101px, 600, $white);
+    }
+  }
+
+  &__description {
+    @include text(0.8125em, 21px, 300, $white);
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    margin-bottom: 34px;
+
+    @media screen and (min-width: $tablet) {
+      @include text(1.125em, 24px, 300, $white);
+      margin-bottom: 45px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      @include text(1.187em, 30px, 300, $white);
+      margin-bottom: 35px;
+    }
+  }
+
+  &__button {
+    padding: 12px 32px;
+    font-size: 18px;
+    line-height: 26px;
+
+    @media screen and (min-width: $desktop) {
+      padding: 17px 46px;
+      font-size: 25px;
+      line-height: 38px;
+    }
+  }
+
+  &__picture {
+    @media screen and (min-width: $tablet) {
+      max-width: 390px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+
+    @media screen and (min-width: $tablet) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+    }
+
+    @media screen and (min-width: $tablet-bigger) {
+      position: absolute;
+      width: 470px;
+      height: 650px;
+      top: 0;
+      left: 500px;
+      margin: 0 auto;
+
+      z-index: -1;
+    }
+
+    @media screen and (min-width: $desktop) {
+      position: absolute;
+      width: 556px;
+      height: 807px;
+      top: 0;
+      left: 570px;
+
+      z-index: -1;
+    }
+  }
+}
